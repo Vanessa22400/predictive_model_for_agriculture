@@ -7,64 +7,62 @@ The analysis prioritizes clarity, interpretability, and practical insights rathe
 
 ## 1. Overview
 
-The objective of this project is to evaluate how well a **single soil feature at a time** can predict crop types using Logistic Regression.
-This helps identify which variable has the highest standalone predictive value and how soil measurements relate to crop suitability.
+The objective is to train **four Logistic Regression models**, each using only one soil feature at a time.
+This approach helps answer a simple but important question:
+
+**“Which individual soil variable best predicts crop type?”**
+
+This provides a transparent understanding of feature importance and sets the foundation for more advanced modeling later.
 
 ## 2. Dataset
 
-The dataset includes four soil measurements:
+The dataset includes:
 
-* N — Nitrogen
-* P — Phosphorous
-* K — Potassium
-* pH — pH level
-* Crop label (target)
+* **Nitrogen (N)**
+* **Phosphorous (P)**
+* **Potassium (K)**
+* **pH level (pH)**
+* **Crop (target)**
 
-Each row also contains the recommended crop type for that combination of values.
+## 3. Methodology
 
-## 3. Feature Exploration (EDA)
+#### Step 1 — Exploratory Analysis (EDA)
 
-Before modeling, each soil variable was explored to understand its distribution and potential influence on crops.
+Initial exploration focused on understanding the distribution of each soil measurement and checking basic correlations.
+This step helps anticipate which features might be more informative for classification.
 
-Example of insights:
+#### Step 2 — Single-Feature Model Training
 
-* Differences in nutrient ranges across crops
-* How each soil measurement varies independently
-* Potential separation patterns useful for prediction
+For each feature (N, P, K, pH):
 
-## 4. Modeling Approach
-
-Each model follows the same simple pipeline:
-
-1. Isolate a single feature (e.g., Nitrogen only)
+1. Isolate a single feature 
 2. Apply train–test split
 3. Train a Logistic Regression model
 4. Evaluate performance on the test set
 5. Compare results across all features
 
-This structure provides a clear, interpretable baseline for understanding feature importance without introducing multivariate effects.
+This isolates the predictive power of each variable without interference from others.
 
+## 4. Results
 
-Key Insight (Main Result)
+Each Logistic Regression model was trained using only one soil feature at a time.
+The accuracy scores were:
+
+* **Nitrogen (N):** 0.143
+* **Phosphorous (P):** 0.189
+* **Potassium (K):** 0.248
+* **pH:** 0.098
+
+#### Key Insight (Main Result)
 
 After evaluating each soil feature individually using Logistic Regression:
 
 **Potassium (K)** achieved the highest accuracy score among all features.
-Although the model is intentionally simple, this suggests that **K levels carry meaningful predictive signal** for identifying suitable crops.
+Even though the models are intentionally simple, this indicates that **K levels provide the strongest individual predictive signal** for identifying suitable crops.
 
-This kind of insight helps highlight which soil measurements may deserve greater attention in agricultural planning or more advanced modeling in future work.
+This insight suggests that potassium may deserve greater attention in agricultural analysis and could be particularly valuable in a more complete multi-feature or advanced modeling workflow.
 
-## Why This Project Matters
-
-This notebook demonstrates:
-* Clear structure and clean code
-* Ability to build and evaluate ML baselines
-* Capability to extract actionable insights (business-friendly)
-* Good understanding of exploratory data analysis
-* Practical communication of findings
-* It is designed to be easy to read for both technical and non-technical audiences, including recruiters and hiring managers.
-
-## Future Improvements
+## 5. Future Improvements
 
 If expanded, the next steps could include:
 * Training full multi-feature models
