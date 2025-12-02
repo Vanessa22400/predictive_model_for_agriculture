@@ -5,7 +5,9 @@ Using a small agricultural dataset with Nitrogen (N), Phosphorous (P), Potassium
 
 The analysis prioritizes clarity, interpretability, and practical insights rather than complex modeling, making it a solid baseline approach for real-world agricultural decision-making.
 
-## 1. Overview
+---
+
+### 1. Project Overview
 
 The objective is to train **four Logistic Regression models**, each using only one soil feature at a time.
 This approach helps answer a simple but important question:
@@ -14,36 +16,35 @@ This approach helps answer a simple but important question:
 
 This provides a transparent understanding of feature importance and sets the foundation for more advanced modeling later.
 
-## 2. Dataset
+---
 
-The dataset includes:
+### 2. Dataset
 
-* **Nitrogen (N)**
-* **Phosphorous (P)**
-* **Potassium (K)**
-* **pH level (pH)**
-* **Crop (target)**
+The dataset used is `soil_measures.csv`, containing four soil features and a target label indicating the recommended crop:
 
-## 3. Methodology
+* **N**: Nitrogen level
+* **P**: Phosphorous level
+* **K**: Potassium level
+* **ph**: pH level
+* **crop** (target): Recommended crop for that soil sample
 
-#### Step 1 — Exploratory Analysis (EDA)
+---
 
-Initial exploration focused on understanding the distribution of each soil measurement and checking basic correlations.
-This step helps anticipate which features might be more informative for classification.
+### 3. Modeling Approach
 
-#### Step 2 — Single-Feature Model Training
+To keep the analysis simple and interpretable, each soil feature is tested independently.
 
 For each feature (N, P, K, pH):
 
-1. Isolate a single feature 
-2. Apply train–test split
-3. Train a Logistic Regression model
-4. Evaluate performance on the test set
-5. Compare results across all features
+1. A **train-test** split is performed.
+2. A **Logistic Regression** model is trained using only that variable.
+3. Model accuracy is recorded.
 
-This isolates the predictive power of each variable without interference from others.
+This method reveals which single soil measurement provides the strongest predictive signal for crop classification.
 
-## 4. Results
+---
+
+### 4. Results
 
 Each Logistic Regression model was trained using only one soil feature at a time.
 The accuracy scores were:
@@ -53,7 +54,7 @@ The accuracy scores were:
 * **Potassium (K):** 0.248
 * **pH:** 0.098
 
-#### Key Insight (Main Result)
+#### Key Insight 
 
 After evaluating each soil feature individually using Logistic Regression:
 
@@ -62,7 +63,7 @@ Even though the models are intentionally simple, this indicates that **K levels 
 
 This insight suggests that potassium may deserve greater attention in agricultural analysis and could be particularly valuable in a more complete multi-feature or advanced modeling workflow.
 
-## 5. Future Improvements
+### 5. Future Improvements
 
 If expanded, the next steps could include:
 * Training full multi-feature models
