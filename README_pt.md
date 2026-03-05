@@ -1,20 +1,20 @@
-# Recomendação de Culturas com Machine Learning  
-*Identificando qual variável do solo possui maior poder preditivo para recomendação de culturas utilizando modelos de machine learning interpretáveis.*
+# Recomendação de Cultivo com Machine Learning  
+*Analisando quais características do solo ajudam a indicar qual tipo de plantio é mais adequado.*
 
 **Dataset:** 2.200 amostras de solo  
-**Variáveis:** Nitrogênio (N), Fósforo (P), Potássio (K), pH  
-**Técnica:** Modelos baseline de Regressão Logística (comparação usando uma variável por vez)  
-**Principal Insight:** Potássio (K) apresenta o sinal preditivo mais forte para recomendação de culturas
+**Variáveis analisadas:** Nitrogênio (N), Fósforo (P), Potássio (K) e pH  
+**Técnica:** modelos simples de machine learning comparando cada variável individualmente  
+**Principal insight:** o nível de potássio apresentou o maior poder de previsão para identificar o cultivo mais adequado.
 
 ---
 
-## Contexto de Negócio
+## Contexto
 
-Escolher a cultura correta para cada tipo de solo é uma decisão essencial na agricultura. Os nutrientes presentes no solo influenciam diretamente o crescimento das plantas, o potencial de produtividade e a sustentabilidade da produção agrícola.
+Escolher qual plantio é mais adequado para cada tipo de solo é uma decisão importante na agricultura. Nutrientes e características químicas do solo influenciam diretamente o desenvolvimento das plantas, a produtividade e a sustentabilidade da produção.
 
-Agricultores e agrônomos normalmente utilizam diferentes medições do solo para determinar qual cultura é mais adequada para determinada área. No entanto, entender **qual variável do solo possui o maior poder preditivo** pode simplificar análises iniciais e melhorar o processo de tomada de decisão.
+Neste projeto, analiso como diferentes características do solo — como nitrogênio, fósforo, potássio e pH — podem ajudar a indicar qual tipo de cultivo tende a ser mais adequado.
 
-Este projeto explora como diferentes nutrientes do solo influenciam a escolha de culturas, avaliando o poder preditivo de cada variável individualmente. O objetivo não é apenas construir um modelo preditivo, mas também gerar **insights claros e interpretáveis sobre qual propriedade do solo possui maior importância estratégica**.
+A ideia não é apenas construir um modelo preditivo, mas entender **qual dessas variáveis do solo carrega mais informação para prever o cultivo mais indicado**.
 
 ---
 
