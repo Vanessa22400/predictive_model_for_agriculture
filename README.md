@@ -221,3 +221,22 @@ Possible extensions for this project include:
 ---
 
 ## Repository Structure
+
+```
+.
+├── data
+├── notebooks
+├── images
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## Conclusion
+
+This project demonstrates how simple machine learning models can be used to extract meaningful insights from agricultural data.
+
+By comparing the predictive power of individual soil measurements, the analysis identified **potassium (K) as the most informative variable** for distinguishing crop suitability in this dataset.
+
+Beyond predictive modeling, the project highlights how exploratory analysis and interpretable models can support **practical decision-making in agricultural planning and soil management**.
