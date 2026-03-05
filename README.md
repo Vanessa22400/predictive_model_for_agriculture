@@ -107,7 +107,7 @@ Answering this question helps identify which soil factor carries the greatest im
 
 ### Distribution of Soil Features
 
-![Feature Distribution](images/image1_Distribution_of_each_Feature.png)
+![Feature Distribution](img/image1_Distribution_of_each_Feature.png)
 
 **Figure:** Distribution of Nitrogen, Phosphorous, Potassium, and pH values across soil samples.
 
@@ -122,7 +122,7 @@ Observations:
 
 ### Correlation Between Soil Features
 
-![Correlation Heatmap](images/image2_Correlation_Heatmap_of_Features.png)
+![Correlation Heatmap](img/image2_Correlation_Heatmap_of_Features.png)
 
 **Figure:** Correlation matrix between soil features.
 
